@@ -31,10 +31,14 @@ function UserMenu() {
             <img src="images/Perfil.svg" alt="Perfil"/>
             <MenuItem label="Perfil" onClick={() => console.log("Login")} />
             </Link>
-            <div className="flex flex-row p-2">
+            <Link to="/transactions" className="flex flex-row p-2">
             <img src="images/Transferir.svg" alt="Perfil"/>
             <MenuItem label="Transferir Dinero"  />
-            </div>
+            </Link>
+            <Link to="/receive" className="flex flex-row p-2">
+            <img src="images/Transferir.svg" alt="Perfil"/>
+            <MenuItem label="Recibir Dinero"  />
+            </Link>
             <div className="flex flex-row p-2">
             <img src="images/Salir.svg" alt="Perfil"/>
             <MenuItem label="Salir"  />
