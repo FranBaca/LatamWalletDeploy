@@ -8,7 +8,7 @@ export default function CheckoutForm({ options }) {
   const navigate = useNavigate();
   const [message, setMessage] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
-
+  
   useEffect(() => {
     // Verificar si el componente CardElement está montado correctamente
     if (elements) {
@@ -70,10 +70,10 @@ export default function CheckoutForm({ options }) {
   };
 
   return (
-    <form id="payment-form" onSubmit={handleSubmit}>
+    <form id="payment-form" onSubmit={handleSubmit} className="mt-10 flex flex-col items-center " >
       {/* Asegúrar de que CardElement se renderice dentro del formulario */}
-      <CardElement id="card-element" options={options} />
-      <button disabled={isProcessing || !stripe || !elements} id="submit">
+      <CardElement id="card-element" options={options} className="w-[500px]"/>
+      <button className="bg-[#6528BD] text-white font-semibold p-2 rounded-md mt-5" disabled={isProcessing || !stripe || !elements} id="submit">
         <span>{isProcessing ? "Processing ... " : "Pay Now"}</span>
       </button>
       {/* Mostrar cualquier mensaje de error o éxito */}

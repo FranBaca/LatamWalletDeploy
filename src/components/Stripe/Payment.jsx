@@ -12,20 +12,6 @@ export default function Payment() {
 
   const { user } = useSelector((state) => state.user);
   const [amount, setAmount] = useState(0);
-  const appearance = {
-    theme: 'stripe',
-  
-    variables: {
-      colorPrimary: '#0570de',
-      colorBackground: '#ffffff',
-      colorText: '#30313d',
-      colorDanger: '#df1b41',
-      fontFamily: 'Ideal Sans, system-ui, sans-serif',
-      spacingUnit: '2px',
-      borderRadius: '4px',
-      // See all possible variables below
-    }
-  };
 
   useEffect(() => {
     // Obtener el clientSecret al cargar el componente
@@ -53,8 +39,8 @@ export default function Payment() {
   }, [user?.payload?.token, amount]);
 
   return (
-    <div className=" p-5 flex flex-col h-screen w-2/3 items-center justify-center">
-      <div className="mx-auto box-border w-[365px] border bg-white p-4 rounded-lg">
+    <div className=" bg-white  border p-5 flex flex-col h-screen w-full  items-center justify-center">
+      <div className="mx-auto box-border w-[500px] border bg-white p-4 rounded-lg">
         <Heading title="Transferir Dinero" />
         <div className="flex flex-col items-start">
           <input
@@ -71,15 +57,15 @@ export default function Payment() {
       </div>
       {clientSecret && amount > 0 && stripePromise && (
         <Elements stripe={stripePromise}>
-          <div className="bg-white w-full h-auto">
+          <div className="bg-white border p-4 rounded-md h-auto mt-10 flex flex-col items-center ">
             <label
               htmlFor="card-element"
               className="text-sm font-medium text-gray-700"
             >
-              Card Information
+              Informacion de su tarjeta
             </label>
             <div className="mt-1" id="card-element">
-              <CheckoutForm options={{ clientSecret,appearance }} />
+              <CheckoutForm options={{ clientSecret }}/>
             </div>
           </div>
         </Elements>
