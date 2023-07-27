@@ -52,13 +52,13 @@ export default function MainPage() {
               <div className="rounded-full bg-[#00FFCB] w-[60px] h-[60px] flex flex-col items-center justify-center">
                 <img src="images/recibir.svg" className="w-[40px]" alt="Enviar" />
               </div>
-              <span className="font-medium">Recibir</span>
+              <span className="font-medium">Retirar</span>
             </Link>
             <Link to="/Payment" className="flex flex-col items-center">
               <div className="rounded-full bg-[#00FFCB] w-[60px] h-[60px] flex flex-col items-center justify-center">
                 <img src="images/compra.svg" className="w-[40px]" alt="Enviar" />
               </div>
-              <span className="font-medium">Compra</span>
+              <span className="font-medium">Recargar</span>
             </Link>
           </div>
           

@@ -39,10 +39,12 @@ function UserMenu() {
             <img src="images/Transferir.svg" alt="Perfil"/>
             <MenuItem label="Recibir Dinero"  />
             </Link>
+            <Link to="/">    
             <div className="flex flex-row p-2">
             <img src="images/Salir.svg" alt="Perfil"/>
             <MenuItem label="Salir"  />
             </div>
+            </Link>
           </div>
         </div>
       )}

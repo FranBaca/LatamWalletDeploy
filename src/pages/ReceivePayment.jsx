@@ -67,7 +67,7 @@ export default function ReceivePayment() {
     </div>
 
     <div class="mt-6">
-      <div class="font-semibold">Ingrese el momento que desea retirar</div>
+      <div class="font-semibold">Ingrese el monto que desea retirar</div>
       <div> 
             <Input
                 type={"number"}
